@@ -1,0 +1,48 @@
+.timer{
+    margin-top: 50px;
+    display: flex;
+}
+
+.field{
+    font-size: 25px;
+}
+.field:not(:last-child){
+    margin-right: 50px;
+    font-size: 25px;
+}
+
+.value{
+    color:tomato;
+
+}
+
+.label{
+    color: teal;
+}
+
+button {
+    width: 150px;
+    height: 30px;
+
+    font-size: 14px;
+
+    border-radius: 5px;
+    outline: none;
+    background-color: teal;
+    border-color:teal;
+    color:white;  
+    
+    cursor: pointer;
+    
+}
+
+button[disabled] {
+    
+    background-color: transparent;
+    color:tomato;
+    border-color: teal;
+}
+
+.flatpickr-input {
+    height: 30px;
+}

@@ -15,7 +15,6 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    console.log(selectedDates[0]);
 
     if (selectedDates[0] < new Date()) {
       Notiflix.Notify.failure('Please choose a date in the future');
@@ -48,12 +47,13 @@ btnRef.addEventListener('click', event => {
         `span[data-${key}]`
       ).textContent = `${dataObj[key]}`);
     }
+  
+      if (timeLeftToDate < 1000) {
+        clearInterval(timerId);
+        return;
+    }
+    
   }, 1000);
-
-  if (timeLeftToDate === 0) {
-    clearInterval(timerId);
-    return;
-  }
 });
 
 function convertMs(ms) {
